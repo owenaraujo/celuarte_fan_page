@@ -10,79 +10,10 @@
     "
   >
     <!--Nav-->
-    <Nav />
+    <Nav :ruta="ruta" />
 
-     <div class="carousel relative container mx-auto mt-16" style="max-width:1600px;">
-        <div class="carousel-inner relative overflow-hidden w-full">
-            <!--Slide 1-->
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('/silicon3.jpg');">
-
-                    <div class="container mx-auto">
-                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-white text-2xl my-4">Silicon case, la mejor proteccion para tu celular</p>
-                            <nuxtLink to="/productos/silicon" class="text-xl inline-block no-underline text-white border-b border-white leading-relaxed hover:text-gray-400 hover:border-gray-400" href="#">ver producto</nuxtLink>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-            <!--Slide 2-->
-            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=1600&q=80');">
-
-                    <div class="container mx-auto">
-                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
-                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-            <!--Slide 3-->
-            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom" style="background-image: url('https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
-
-                    <div class="container mx-auto">
-                        <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Brown and blue hardbound book</p>
-                            <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-            <!-- Add additional indicators for each slide-->
-            <ol class="carousel-indicators">
-                <li class="inline-block mr-3">
-                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
-                </li>
-            </ol>
-
-        </div>
-    </div>
-
-
-    <section class="bg-white py-8" v-show="menu.viewStore">
+    <Carusel/>
+    <section class="bg-white py-8" >
       <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
         <nav id="store" class="w-full z-30 top-0 px-6 py-1">
           <div
@@ -98,7 +29,7 @@
               py-3
             "
           >
-            <a
+            <div
               class="
                 uppercase
                 tracking-wide
@@ -107,210 +38,93 @@
                 font-bold
                 text-gray-800 text-xl
               "
-              href="#"
+            
             >
               nuestros productos
-            </a>
-
-            <div class="d-none flex items-center" id="store-nav-content">
-              <a
-                class="pl-3 inline-block no-underline hover:text-black"
-                href="#"
-              >
-                <svg
-                  class="fill-current hover:text-black"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                </svg>
-              </a>
-
-              <a
-                class="pl-3 inline-block no-underline hover:text-black"
-                href="#"
-              >
-                <svg
-                  class="fill-current hover:text-black"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"
-                  />
-                </svg>
-              </a>
             </div>
+
           </div>
         </nav>
+<!-- prueba  -->
+<style>
+  
+</style>
+<div class="container p-4">
+        <div class="row">
+            <div class="card-columns">
 
-        <Producto
-          v-for="item in menu.productos"
-          :producto="item"
-          :key="item.id"
-        />
-      </div>
-    </section>
+                
 
-    <section class="bg-white py-8" v-show="!menu.viewStore">
-      <div class="container py-8 px-6 mx-auto">
-        <a
-          class="
-            uppercase
-            tracking-wide
-            no-underline
-            hover:no-underline
-            font-bold
-            text-gray-800 text-xl
-            mb-8
-          "
-          href="#"
-        >
-          acerca de nosotros
-        </a>
-
-        <p class="mt-8 mb-8">
-          This template is inspired by the stunning nordic minamalist design -
-          in particular:
-          <br />
-          <a
-            class="text-gray-800 underline hover:text-gray-900"
-            href="http://savoy.nordicmade.com/"
-            target="_blank"
-            >Savoy Theme</a
-          >
-          created by
-          <a
-            class="text-gray-800 underline hover:text-gray-900"
-            href="https://nordicmade.com/"
-            >https://nordicmade.com/</a
-          >
-          and
-          <a
-            class="text-gray-800 underline hover:text-gray-900"
-            href="https://www.metricdesign.no/"
-            target="_blank"
-            >https://www.metricdesign.no/</a
-          >
-        </p>
-
-        <p class="mb-8">
-          Lorem ipsum dolor sit amet, consectetur
-          <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra
-          maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec
-          ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam.
-          In est ante in nibh mauris. Egestas congue quisque egestas diam in.
-          Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor
-          consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac
-          habitasse platea dictumst quisque. In aliquam sem fringilla ut.
-          Gravida rutrum quisque non tellus orci ac auctor augue mauris.
-          Accumsan lacus vel facilisis volutpat est velit egestas dui id. At
-          tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas
-          fringilla. Vitae congue eu consequat ac.
-        </p>
-      </div>
-    </section>
-
-    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-      <h5 class="text-center">comunicate con nosotros</h5>
-      <div class="container flex px-3 py-8">
-        <div class="w-full mx-auto justify-center flex flex-wrap">
-          <a @click="toWs">
-            <img class="p-5" src="/ws.png" alt="" />
-          </a>
-          <a @click="toIg">
-            <img src="/ig.png" class="p-5" alt="" />
-          </a>
-          <a @click="toFb">
-            <img src="/fb.png" class="p-5" alt="" />
-          </a>
+                <div class="card animated fadeInDown  "  v-for="image in productos" :key="image._id">
+                    <img :src="image.path" class="card-img-top" :alt="image.filename">
+                    <div class="card-body">
+                        <h5 class="card-title">{{image.title}}</h5>
+                        <p class="card-text">{{image.description}}</p>
+                        
+                       
+                    </div>
+                </div>
+                
+            </div>
         </div>
+    </div>
+<!-- prueba  -->
+
+
+       <div class="container p-5 hidden">
+          <div 
+        class="grid gap-x-8 gap-y-4 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 xl:grid-cols-4 auto-cols-max "
+        >
+          <Producto
+          v-for="item in productos"
+          :producto="item"
+          :key="item._id"
+        />
+        </div>
+       </div>
       </div>
-    </footer>
+    </section>
+
+   
+<Footer/>
+    
   </div>
 </template>
 <script>
 import { mapState } from "vuex";
+import axios from "axios"
 export default {
   data() {
     return {
+      ruta: { url: "/servicioTecnico", nombre: "Servicio Técnico" },
+productos: [],
       store: false,
-      ws: "https://wa.me/message/QN44EMB2UVLKG1",
-      ig: "https://www.instagram.com/celuarte/?hl=es-la",
-      fb: "https://www.facebook.com/Celuarte-207328293281630/",
+      
     };
   },
+  created(){
+    this.getProducts()
+  },
   methods: {
-    toWs() {
-      window.open(this.ws, "_blanck");
-    },
-    toIg() {
-      window.open(this.ig, "_blanck");
-    },
-    toFb() {
-      window.open(this.fb, "_blanck");
-    },
+  async  getProducts (){
+const {data} = await axios.get("/api/image")
+this.productos = data
+  },
+   
   },
   computed: {
     ...mapState(["menu"]),
   },
-}
+};
+
 </script>
- <style>
-        .work-sans {
-            font-family: 'Work Sans', sans-serif;
-        }
-                
-        #menu-toggle:checked + #menu {
-            display: block;
-        }
-        
-        .hover\:grow {
-            transition: all 0.3s;
-            transform: scale(1);
-        }
-        
-        .hover\:grow:hover {
-            transform: scale(1.02);
-        }
-        
-        .carousel-open:checked + .carousel-item {
-            position: static;
-            opacity: 100;
-        }
-        
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
-        
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
-            display: block;
-        }
-        
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #000;
-            /*Set to match the Tailwind colour you want the active one to be */
-        }
-    </style>
+ <style scoped>
+ @import "../static/static/style.css";
+ 
+ @media  (min-width: 900px) {
+    .card-columns {
+    column-count: 4;
+      
+  }
+  }
+ </style>
